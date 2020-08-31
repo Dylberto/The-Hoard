@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+﻿//Dylan G
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.PostProcessing;
 
-//Dylan G
 
 public class player : MonoBehaviour
 {

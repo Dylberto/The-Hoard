@@ -1,8 +1,7 @@
-﻿using UnityEngine;
+﻿//Dylan G
+using UnityEngine;
 using System.Collections;
 using TMPro;
-
-//Dylan G
 
 public class Gun : MonoBehaviour
 {
@@ -55,22 +54,24 @@ public class Gun : MonoBehaviour
             return;
         }       // if reloading stop the update method until done                   
 
-        if (ammo_held > 0 && Input.GetKeyDown(KeyCode.R))
+        if (ammo_held > 0 && current_ammo < max_ammo && Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(reload());
             return;
         }          // if current ammo = 0 start reloading
 
-
-        if (Input.GetButton("Fire1") && Time.time >= cooldown)
+        if(pause_menu.game_paused == false)                                // if the game isn't paused
         {
+            if (Input.GetButton("Fire1") && Time.time >= cooldown && current_ammo > 0)
+            {
 
-            cooldown = Time.time + 1 / fire_rate;
-            shoot();
+                cooldown = Time.time + 1 / fire_rate;
+                shoot();
 
-            sound.Play();
+                sound.Play();
 
-        }       // if left mouse is clicked and cooldown 
+            }       // if left mouse is clicked and cooldown 
+        }
 
 
 

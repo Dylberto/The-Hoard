@@ -1,0 +1,256 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2255033930626689645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2255033930626689644}
+  m_Layer: 0
+  m_Name: Spawn point 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2255033930626689644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255033930626689645}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.336, y: 1.181, z: -20.183}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2255033930669222078}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2255033930669222072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2255033930669222078}
+  - component: {fileID: 2255033930669222079}
+  m_Layer: 0
+  m_Name: wave spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2255033930669222078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255033930669222072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.81, y: 1, z: 23.96}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2255033931646187754}
+  - {fileID: 2255033930626689644}
+  - {fileID: 2255033930773708422}
+  - {fileID: 2255033931361383957}
+  - {fileID: 2255033932601603346}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2255033930669222079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255033930669222072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29fde7ddda45d14296dfa59ac04eacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombies_alive: {fileID: 0}
+  wave_timer: {fileID: 0}
+  health_buff: 4
+  dmg_buff: 3
+  enemy: {fileID: 4221479622194105130, guid: decb1e2d7c7cf944ca10f0a56f2ae1e5, type: 3}
+  holster: {fileID: 0}
+  waves:
+  - name: Zomibe Horde
+    enemy: {fileID: 4221479622193813258, guid: decb1e2d7c7cf944ca10f0a56f2ae1e5, type: 3}
+    num_of_zombies: 0
+    spawn_rate: 2
+  - name: Zomibe Horde
+    enemy: {fileID: 4221479622193813258, guid: decb1e2d7c7cf944ca10f0a56f2ae1e5, type: 3}
+    num_of_zombies: 0
+    spawn_rate: 2
+  - name: Zomibe Horde
+    enemy: {fileID: 4221479622193813258, guid: decb1e2d7c7cf944ca10f0a56f2ae1e5, type: 3}
+    num_of_zombies: 0
+    spawn_rate: 2
+  - name: Zomibe Horde
+    enemy: {fileID: 4221479622193813258, guid: decb1e2d7c7cf944ca10f0a56f2ae1e5, type: 3}
+    num_of_zombies: 0
+    spawn_rate: 2
+  - name: Zomibe Horde
+    enemy: {fileID: 4221479622193813258, guid: decb1e2d7c7cf944ca10f0a56f2ae1e5, type: 3}
+    num_of_zombies: 0
+    spawn_rate: 2
+  - name: Zomibe Horde
+    enemy: {fileID: 4221479622193813258, guid: decb1e2d7c7cf944ca10f0a56f2ae1e5, type: 3}
+    num_of_zombies: 0
+    spawn_rate: 2
+  - name: Zomibe Horde
+    enemy: {fileID: 4221479622193813258, guid: decb1e2d7c7cf944ca10f0a56f2ae1e5, type: 3}
+    num_of_zombies: 0
+    spawn_rate: 2
+  - name: Zomibe Horde
+    enemy: {fileID: 4221479622193813258, guid: decb1e2d7c7cf944ca10f0a56f2ae1e5, type: 3}
+    num_of_zombies: 0
+    spawn_rate: 2
+  - name: Zomibe Horde
+    enemy: {fileID: 4221479622193813258, guid: decb1e2d7c7cf944ca10f0a56f2ae1e5, type: 3}
+    num_of_zombies: 0
+    spawn_rate: 2
+  - name: Zomibe Horde
+    enemy: {fileID: 4221479622193813258, guid: decb1e2d7c7cf944ca10f0a56f2ae1e5, type: 3}
+    num_of_zombies: 0
+    spawn_rate: 2
+  next_wave: 0
+  spawn_points:
+  - {fileID: 2255033931646187754}
+  - {fileID: 2255033930626689644}
+  - {fileID: 2255033930773708422}
+  - {fileID: 2255033931361383957}
+  - {fileID: 2255033932601603346}
+  time_between_waves: 0
+  wave_count_down: 0
+--- !u!1 &2255033930773708423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2255033930773708422}
+  m_Layer: 0
+  m_Name: Spawn point 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2255033930773708422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255033930773708423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.75, y: 4.148, z: 11.57}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2255033930669222078}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2255033931361383958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2255033931361383957}
+  m_Layer: 0
+  m_Name: Spawn point 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2255033931361383957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255033931361383958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.35, y: 0, z: -10.84}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2255033930669222078}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2255033931646187755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2255033931646187754}
+  m_Layer: 0
+  m_Name: Spawn point 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2255033931646187754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255033931646187755}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.445, y: 0, z: 3.711}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2255033930669222078}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2255033932601603347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2255033932601603346}
+  m_Layer: 0
+  m_Name: Spawn point 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2255033932601603346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255033932601603347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.985, y: 5.488, z: -14.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2255033930669222078}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

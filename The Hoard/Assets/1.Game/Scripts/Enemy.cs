@@ -1,16 +1,17 @@
-﻿using UnityEngine;
+﻿//Dylan G
+using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
 
-//Dylan G
 
 public class Enemy : MonoBehaviour
 {
 
     //Public Variables
-    public int max_health = 5;                                                    // health of the enemy
+    public int start_health = 20;
+    public int max_health = 20;                                                    // health of the enemy
     public float radius = 100f;                                                  // radius of following player
     public int enemy_dmg = 1;                                                 // damage done by enemy
     public float cooldown = 0.01f;                                                // damage cooldown

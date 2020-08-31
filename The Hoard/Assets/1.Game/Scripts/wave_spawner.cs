@@ -1,9 +1,8 @@
-﻿using UnityEngine;
+﻿//Dylan G
+using UnityEngine;
 using System.Collections;
 using TMPro;
 using UnityEngine.SceneManagement;
-
-//Dylan G
 
 public class wave_spawner : MonoBehaviour
 {
@@ -15,20 +14,22 @@ public class wave_spawner : MonoBehaviour
 
     public int health_buff = 5;
     public int dmg_buff = 3;
-
+    
     public GameObject enemy;
+
+    public GameObject holster;
 
     [System.Serializable]
     public class Wave
     {
         public string name;
         public Transform enemy;
-        public int count;
+        public int num_of_zombies;
         public float spawn_rate;
     }
 
     public Wave[] waves;
-    private int next_wave = 0;
+    public int next_wave = 1;
 
     public Transform[] spawn_points;
 
@@ -43,7 +44,7 @@ public class wave_spawner : MonoBehaviour
 
     private void Start()
     {
-
+       enemy.GetComponent<Enemy>().max_health = enemy.GetComponent<Enemy>().start_health;
         wave_count_down = time_between_waves;
 
 
@@ -79,6 +80,8 @@ public class wave_spawner : MonoBehaviour
         {
             wave_count_down -= Time.deltaTime;
         }
+
+        
     }
 
     void wave_complete()
@@ -90,6 +93,10 @@ public class wave_spawner : MonoBehaviour
 
         wave_count_down = time_between_waves;
 
+        holster.GetComponent<weapon_switch>().selected_weapon = Random.Range(0, 3);
+
+        holster.GetComponent<weapon_switch>().select_weapon();
+
         if(next_wave + 1 > waves.Length - 1)
         {
             SceneManager.LoadScene("wins");
@@ -97,8 +104,7 @@ public class wave_spawner : MonoBehaviour
         else
         {
 
-            enemy.GetComponent<Enemy>().max_health += (health_buff * waves.Length);
-            GameObject.FindGameObjectWithTag("gun").GetComponent<Gun>().dmg += (dmg_buff * waves.Length);
+            enemy.GetComponent<Enemy>().max_health += health_buff;
             next_wave++;
             
 
@@ -124,9 +130,19 @@ public class wave_spawner : MonoBehaviour
 
     IEnumerator Spawn_wave(Wave current_wave)
     {
+        if(current_wave.num_of_zombies < 30)
+        {
+            current_wave.num_of_zombies = next_wave * 5;
+        }
+        else
+        {
+            current_wave.num_of_zombies = 30;
+            current_wave.spawn_rate = 1;
+        }
+      
         state = spawn_state.spawning;
 
-        for(int i = 0; i < current_wave.count; i++)
+        for(int i = 0; i < current_wave.num_of_zombies; i++)
         {
             spawn(current_wave.enemy);
             yield return new WaitForSeconds(1f / current_wave.spawn_rate);
